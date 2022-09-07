@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Traductor from './components/Traductor';
+import token from "./img.gif"
+import { FaGithub , FaLinkedin } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Traductor/>
+      <div className="foot">
+        <img src={token} alt="token" className="img"/>
+        <div className="boton">
+          <a href ={`https://www.linkedin.com/in/sergio-yepes-2b7158214/`} target="_blanck"><FaLinkedin /></a>
+          <a href={`https://github.com/SergioYepes`} target="_blanck"><FaGithub /></a>
+        </div>
+      </div>
     </div>
   );
 }
